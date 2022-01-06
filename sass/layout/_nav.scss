@@ -1,0 +1,34 @@
+nav{
+    background-color: $background;
+    color:white;
+    font-size: 15px;
+    
+    @include flexy($dir:row,$just:space-between);
+    align-items: center;
+
+    & .displayOff{
+        display: none;
+    }
+    & article{
+        @include flexy($dir:row);
+        column-gap: 10px;
+        margin-right: 0.8em;;
+        align-items: center;
+    }
+    & h2{
+        margin-left:0.8em;
+    letter-spacing: 4px;
+
+    }
+    & h3{
+        font-weight: 100;
+    }
+    & p{
+        color:rgb(182, 140, 253);
+    }
+    
+
+    
+
+
+}

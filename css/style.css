@@ -1,0 +1,703 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* MiscS
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+nav {
+  background-color: #5727aa;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .displayOff {
+  display: none;
+}
+nav article {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  margin-right: 0.8em;
+  align-items: center;
+}
+nav h2 {
+  margin-left: 0.8em;
+  letter-spacing: 4px;
+}
+nav h3 {
+  font-weight: 100;
+}
+nav p {
+  color: #b68cfd;
+}
+
+body .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+main .course-update-container {
+  width: 90%;
+  margin: auto;
+}
+main .course-update-container .validation {
+  display: none;
+  background-color: #c6aaf5;
+  border-radius: 5px;
+  height: 100px;
+}
+main .course-update-container .validation h3 {
+  color: #9c1212;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+main .course-update-container .validation ul {
+  margin: 0;
+  padding-left: 25px;
+}
+main .course-update-container input {
+  border-radius: 5px;
+  height: 35px;
+}
+main .course-update-container .container-update {
+  margin-bottom: 20px;
+}
+main .course-update-container .second-update-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+main .course-update-container textarea {
+  border-radius: 5px;
+}
+main .course-update-container .first-update-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+main .course-update-container .updateButtoane {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+main .course-update-container .updateButtoane button {
+  font-size: 25px;
+  padding: 8px 0px 8px 0px;
+  border-radius: 10px;
+  border: none;
+}
+main .course-update-container .updateButtoane .cancelUpdate {
+  background-color: white;
+  color: #5727aa;
+  border: 1px solid #5727aa;
+  font-weight: bold;
+}
+main .course-update-container .updateButtoane .update {
+  background-color: #5727aa;
+  color: white;
+}
+main .course-update-container .updateButtoane .create {
+  background-color: #5727aa;
+  color: white;
+}
+main .course-update-container .updateButtoane .cancelCreate {
+  background-color: white;
+  color: #5727aa;
+  border: 1px solid #5727aa;
+  font-weight: bold;
+}
+main .course-detail-container .container-first-second {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+main .course-detail-container h2 {
+  margin-left: 0.5em;
+}
+main .course-detail-container .p-course {
+  margin-left: 1em;
+  text-transform: uppercase;
+  border-bottom: 1px solid gray;
+  color: gray;
+}
+main .course-detail-container .course-information {
+  margin-left: 1em;
+}
+main .course-detail-container .course-information h1 {
+  color: #5727aa;
+  font-weight: bold;
+}
+main .course-detail-container .second-detail-container .estimated, main .course-detail-container .second-detail-container .materials {
+  text-transform: uppercase;
+  border-bottom: 1px solid gray;
+  color: gray;
+  margin-left: 1em;
+}
+main .course-detail-container .second-detail-container p {
+  margin-left: 1em;
+}
+main .signIn {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+}
+main .signIn h2 {
+  font-size: 30px;
+}
+main .signIn form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+main .signIn form label {
+  margin-bottom: 0.3em;
+  font-size: 20px;
+}
+main .signIn form input {
+  height: 30px;
+  margin-bottom: 0.8em;
+  border-radius: 5px;
+}
+main .signIn form .container-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+main .signIn form .container-buttons button {
+  font-size: 25px;
+  padding: 8px 0px 8px 0px;
+  border-radius: 10px;
+  border: none;
+}
+main .signIn form .container-buttons .signInButton {
+  background-color: #5727aa;
+  color: white;
+}
+main .signIn form .container-buttons .cancelButton {
+  background-color: white;
+  color: #5727aa;
+  border: 1px solid #5727aa;
+  font-weight: bold;
+}
+main .signIn form p {
+  margin-top: 50px;
+  font-size: 20px;
+  word-spacing: 5px;
+}
+main .signIn form p span {
+  color: #5727aa;
+}
+main .signUp {
+  width: 90%;
+  margin: auto;
+  max-width: 500px;
+}
+main .signUp h2 {
+  font-size: 30px;
+}
+main .signUp form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+main .signUp form label {
+  margin-bottom: 0.3em;
+  font-size: 20px;
+}
+main .signUp form input {
+  height: 30px;
+  margin-bottom: 0.8em;
+  border-radius: 5px;
+}
+main .signUp form .container-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+main .signUp form .container-buttons button {
+  font-size: 25px;
+  padding: 8px 0px 8px 0px;
+  border-radius: 10px;
+  border: none;
+}
+main .signUp form .container-buttons .signInButton {
+  background-color: #5727aa;
+  color: white;
+}
+main .signUp form .container-buttons .cancelButton {
+  background-color: white;
+  color: #5727aa;
+  border: 1px solid #5727aa;
+  font-weight: bold;
+}
+main .signUp form p {
+  margin-top: 50px;
+  font-size: 20px;
+  word-spacing: 5px;
+}
+main .signUp form p span {
+  color: #5727aa;
+}
+main .forbidden {
+  font-size: 25px;
+}
+main .forbidden h2 {
+  font-weight: bold;
+}
+main .forbidden * {
+  margin-left: 0.8em;
+}
+main .forbidden p {
+  margin-left: 1.2em;
+}
+main .notFound {
+  font-size: 25px;
+}
+main .notFound h2 {
+  font-weight: bold;
+}
+main .notFound * {
+  margin-left: 0.8em;
+}
+main .notFound p {
+  margin-left: 1.2em;
+}
+main .container-courses {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+main .container-courses .course {
+  line-height: 5px;
+  font-size: 15px;
+  background-color: #834de0;
+  color: white;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  height: 100px;
+}
+main .container-courses .course * {
+  margin-left: 0.8em;
+}
+main .container-courses .course p {
+  margin-left: 1.2em;
+  margin-top: 1.8em;
+}
+main .container-courses .addCourse {
+  background-color: #e6e1e1;
+  color: #834de0;
+  width: 90%;
+  border-radius: 5px;
+  margin: auto;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main .container-courses .addCourse * {
+  margin-left: 0.8em;
+}
+@media (min-width: 600px) {
+  main .container-courses {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  main .container-courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+  }
+  main .course-update-container .container-update {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    column-gap: 20px;
+  }
+  main .course-detail-container .container-first-second {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    column-gap: 40px;
+  }
+}
+@media (min-width: 2000px) {
+  main .container-courses {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 25px;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+header button {
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  margin-left: 0.5em;
+  color: white;
+  width: 150px;
+}
+header .update, header .delete {
+  background-color: #5727aa;
+}
+header .return, header .join {
+  background-color: #cbb3f5;
+  color: #5727aa;
+  border: 2px solid #5727aa;
+  font-weight: bold;
+}
+header .container-button-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+  background-color: #cbb3f5;
+  height: 50px;
+}
+header .displayOff {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

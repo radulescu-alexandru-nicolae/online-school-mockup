@@ -1,0 +1,38 @@
+header{
+ 
+    // @include flexy($dir:row);
+    // align-items: center;
+    // column-gap: 10px;;
+
+    & button{
+        border:none;
+        height:35px;
+        border-radius: 5px;
+        margin-left: 0.5em;;
+        color:white;
+       width: 150px;
+    }
+    & .update,.delete{
+        background-color: $background;
+    }
+
+    & .return,.join{
+        background-color: rgb(203, 179, 245);
+        color:$background;
+        border:2px solid $background;
+        font-weight: bold;
+    }
+    @include flexy($dir:column);
+    & .container-button-header{
+            @include flexy($dir:row);
+    align-items: center;
+    column-gap: 10px;;
+    background-color: rgb(203, 179, 245);
+    height: 50px;
+    }
+
+
+    & .displayOff{
+        display: none;
+    }
+}

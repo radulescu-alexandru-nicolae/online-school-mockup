@@ -1,0 +1,27 @@
+@mixin flexy($disp:flex,$dir:null,$just:null,$wrap:null){
+
+    display: $disp;
+    flex-direction: $dir;
+    justify-content: $just;
+    flex-wrap: $wrap;
+}
+
+@mixin mq($break){
+    $value:map-get($breakpoints,$break);
+    $sm:map-get($breakpoints,'sm');
+    @if($value==null){
+        @error "{$break} is not a valid breakpoint";
+    }@else if $value<$sm{
+        @media(max-width:$value){
+            @content;
+        }
+    }@else{
+        @media(min-width:$value){
+            @content;
+        }
+    }
+} @mixin signUpActive {
+    .cont.s--signup & {
+      @content;
+    }
+  }

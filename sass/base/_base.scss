@@ -1,0 +1,6 @@
+body{
+  & .container{
+    @include flexy($dir:column);
+    row-gap: 50px;
+  }
+}
