@@ -124,7 +124,6 @@ export default class CreateCourse{
 
   submitEvent=(e)=>{
       if(this.course.name===undefined||this.course.description===undefined||this.course.time===undefined||this.course.department===undefined){
-          console.log('e');
           document.querySelector('.validation').style.display="unset";
           document.querySelector('.validation').style.background=" #c6aaf5";
       }else{

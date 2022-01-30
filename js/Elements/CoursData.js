@@ -34,6 +34,23 @@ export default class CourseData{
         }
     }
 
+
+    async getCourseById(id){
+        try{
+
+            const response=await this.api.returnApi(`http://localhost:5000/api/v1/courses/${id}`,"GET");
+            
+            if(response.status===200){
+                return response.json();
+            }else{
+                return false;
+            }
+        }catch(e){
+            return new Error(e);
+
+        }
+
+    }
     async getCourseByName(name){
         try{
             const response=await this.api.returnApi(`http://localhost:5000/api/v1/courses/getCourse/${name}`,"GET");
@@ -63,7 +80,7 @@ export default class CourseData{
     async updateCourse(id,course){
      
         try{
-            const response=await this.api.returnApi(`http://localhost:5000/api/v1/courses/uptadeCourse/${id}`,"PUT",course)
+            const response=await this.api.returnApi(`http://localhost:5000/api/v1/courses/update/${id}`,"PUT",course)
             if(response.status===200){
                 return true;
             }else{

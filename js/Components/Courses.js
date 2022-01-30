@@ -22,6 +22,10 @@ export default class Courses{
         this.courseData=new CourseData();
         this.cursuri();
 
+        console.log(this.courseData.getCourseByName("ASd"));
+        
+        
+
     }
    async cursuri(){
         let d=await this.courseData.getCourses();
@@ -88,6 +92,7 @@ export default class Courses{
     }
     goCourse=(element)=>{
         let obj=element.target;
+        console.log(obj);
         if(obj.classList.contains("course")){
             let courseDetail=new CourseDetail(obj,this.student);
         }else{

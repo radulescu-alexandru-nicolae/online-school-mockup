@@ -23,7 +23,7 @@ export default class StudentData{
 
     async createStudent(Student){
         try{
-            const response=await this.api.returnApi("http://localhost:5000/api/v1/students","POST",Student);
+            const response=await this.api.returnApi("http://localhost:5000/api/v1/students/create","POST",Student);
             if(response.status===200){
                let courses=new Courses(Student);
             }
@@ -47,7 +47,7 @@ export default class StudentData{
     async getStudentByEmail(email){
       
         try{
-                const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/getStudent/${email}`,"GET");
+                const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/getByEmail/${email}`,"GET");
              
             
                 if(response.status===200){
@@ -67,6 +67,19 @@ export default class StudentData{
                 return true;
             }else{
                 return false;
+            }
+        }catch(e){
+            return new Error(e);
+        }
+    }
+
+
+    async joinCourse(id,studentId){
+        console.log(id);
+        try{
+            const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/joinCourse/${id}/${studentId}`,"POST");
+            if(response.status===200){
+                return true;
             }
         }catch(e){
             return new Error(e);

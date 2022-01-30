@@ -113,8 +113,10 @@ export default class SignUp{
         this.newAccount.password===undefined||this.newAccount.age===undefined){
         let forbidden=new Forbidden();
        }else{
-        this.studentData.createStudent(this.newAccount);
 
+       
+        this.studentData.createStudent(this.newAccount);
+        this.courses=new Courses(this.newAccount);
        }
        
 

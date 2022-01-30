@@ -1,4 +1,5 @@
 import CourseData from "../Elements/CoursData.js";
+import StudentData from "../Elements/StudentData.js";
 import Courses from "./courses.js";
 import SignIn from "./SignIn.js";
 import SignUp from "./SignUp.js";
@@ -17,7 +18,6 @@ export default class CourseDetail{
   
         this.student=student;
         this.checkLogin(student);
-
        
 
         this.id;
@@ -29,6 +29,13 @@ export default class CourseDetail{
 this.aux;
 
         this.showHeader();
+
+        this.studentData=new StudentData();
+
+        this.courseInformation=this.courseData.getCourseByName(this.course.querySelector('h2').textContent);
+
+        console.log(this.student);
+       
     }
 
 
@@ -122,11 +129,6 @@ this.aux;
         ;
         this.container.appendChild(main);
     }
-
-    
- 
-
-
     checkLogin=(student)=>{
         if(student!==undefined){
             document.querySelector('.login').classList.toggle("displayOff");
@@ -163,6 +165,13 @@ this.aux;
             let a=new Courses(this.student);
         }else if(obj.classList.contains("update")){
             let update=new UpdateCourse(this.aux,this.student);
+        }else if(obj.classList.contains("join")){
+            this.courseInformation.then((raspuns)=>{
+                this.studentData.joinCourse(raspuns.id,this.student.id);
+            
+
+            });
+            let courses=new Courses(this.student);
         }
     }
     navEvent=(e)=>{
