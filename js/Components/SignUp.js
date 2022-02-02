@@ -11,20 +11,16 @@ export default class SignUp{
         this.newAccount={};
         this.conturi=[];
         this.aux;
-
         this.form=document.querySelector('form');
         this.form.addEventListener('change',this.handleChange);
         this.signInButton=document.querySelector('.signInButton');
-
         this.load();
-       
         this.signInButton.addEventListener('click',this.addAccounut);
-
         this.studentData=new StudentData();
         this.nav=document.querySelector('nav');
         this.nav.addEventListener('click',this.navEvent);
+        this.checkEmail('testt');
     }
-
     setNav=()=>{
         let nav=document.createElement('nav');
         nav.innerHTML=`
@@ -41,7 +37,6 @@ export default class SignUp{
         this.container.appendChild(nav);
         
     }
- 
     setMain=()=>{
         let main=document.createElement('main');
         main.innerHTML=`
@@ -97,24 +92,35 @@ export default class SignUp{
             this.newAccount.last_name=obj.value;
         }else if(obj.classList.contains("input-email")){
             this.newAccount.email=obj.value;
+
+            this.checkEmail(obj.value);
         }else if(obj.classList.contains("input-password")){
             this.newAccount.password=obj.value;
         }else if(obj.classList.contains("input-age")){
             this.newAccount.age=obj.value;
         }
-
     }
-
-
+   async checkEmail(email){
+       try{
+        let allStudents=await this.studentData.getStudentByEmail(email);
+      console.log(allStudents);
+      if(allStudents!==false){
+          document.querySelector('.input-email').style.border="2px solid red";
+          console.log('a');
+      }else{
+        document.querySelector('.input-email').style.border="2px solid black";
+      }
+       }catch(e){
+           throw new Error(e);
+       }
+    }
     addAccounut=(e)=>{
         let ok=1;
         e.preventDefault();
        if(this.newAccount.first_name===undefined||this.newAccount.last_name===undefined||this.newAccount.email===undefined||
-        this.newAccount.password===undefined||this.newAccount.age===undefined){
+        this.newAccount.password===undefined||this.newAccount.age===undefined||this.checkEmail(this.newAccount.email)){
         let forbidden=new Forbidden();
        }else{
-
-       
         this.studentData.createStudent(this.newAccount);
         this.courses=new Courses(this.newAccount);
        }

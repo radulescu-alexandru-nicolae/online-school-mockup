@@ -1,5 +1,6 @@
 import StudentData from "../Elements/StudentData.js";
 import Courses from "./courses.js";
+import NotFound from "./NotFound.js";
 
 export default class SignIn{
     constructor(){
@@ -82,11 +83,18 @@ this.nav.addEventListener('click',this.navEvent);
     }
 
   logIn=(e)=>{
-        e.preventDefault();
+     
         let student= this.studentData.getStudentByEmail(this.account.email);
+       console.log(student);
         student.then((user)=>{
+            console.log(user);
+            
             if(user.email===this.account.email&&user.password===this.account.password){
+               
                 let courses=new Courses(user);
+                
+            }else{
+                // let notFound=new NotFound();
             }
         })
         

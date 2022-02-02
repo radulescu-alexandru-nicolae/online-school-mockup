@@ -6,9 +6,6 @@ export default class NotFound{
         this.setNav();
         this.setMain();
     }
-
-
-
     setNav=()=>{
         let nav=document.createElement('nav');
         nav.innerHTML=`
@@ -25,7 +22,6 @@ export default class NotFound{
         this.container.appendChild(nav);
         
     }
-
     setMain=()=>{
         let main=document.createElement('main');
         main.innerHTML=`

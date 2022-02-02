@@ -36,30 +36,25 @@ export default class StudentData{
             const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/delete/${id}`,"DELETE");
             if(response.status===200){
                 let course=new Courses();
-                
             }
         }catch(e){
             return new Error(e);
         }
-
     }
 
     async getStudentByEmail(email){
-      
         try{
                 const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/getByEmail/${email}`,"GET");
-             
-            
-                if(response.status===200){
+                if(response.status===302){
                     return response.json();
                 }else{
+                    
                     return false;
                 }
         }catch(e){
             return new Error(e);
         }
     }
-
     async updateStudent(id,student){
         try{
             const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/update/${id}`,student);
@@ -72,12 +67,32 @@ export default class StudentData{
             return new Error(e);
         }
     }
-
-
     async joinCourse(id,studentId){
         console.log(id);
         try{
             const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/joinCourse/${id}/${studentId}`,"POST");
+            if(response.status===200){
+                return true;
+            }
+        }catch(e){
+            return new Error(e);
+        }
+    }
+
+    async getJoinedCourses(id){
+        try{
+            const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/getJoinedCourse/${id}`,"GET");
+            if(response.status===200){
+                return response.json();
+            }
+        }catch(e){
+            return new Error(e);
+        }
+    }
+
+    async deletJoindCourse(idCourse,idStudnt){
+        try{
+            const response=await this.api.returnApi(`http://localhost:5000/api/v1/students/deleteJoinedCourses/${idStudnt}/${idCourse}`,"DELETE");
             if(response.status===200){
                 return true;
             }
